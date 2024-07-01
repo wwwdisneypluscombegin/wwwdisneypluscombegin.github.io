@@ -330,6 +330,9 @@
     <div class="container">
 	<p>Having trouble entering your Disney+ login information on your smart TV or gaming console?  Disney+ offers a simpler way to activate your device. Head to disneyplus.com/begin on your phone, computer, or tablet. This website is for activating Disney+, not logging in to your account.  Enter the 8-digit code displayed on your TV screen and link your device to your existing Disney+ account.  Once activated, you're ready to stream your favorite Disney, Pixar, Marvel, Star Wars, and National Geographic content!</p>
 
+
+<button class="listen-button" id="listen-button"><i class="fas fa-play"></i> Listen</button>
+	    
 	<h2>Reasons to Choose Disneyplus.com/begin</h2>
 	<p>Here are some reasons to choose disneyplus.com/begin to activate your Disney plus on a TV or console:</p>
 	<ul>
@@ -338,6 +341,7 @@
 		<li><strong>Works on any device with a web browser:</strong> Don't have your phone handy? You can use any laptop or tablet to enter the code as long as it has a web browser.</li>
 	</ul>
 
+	    <button class="listen-button" id="listen-button"><i class="fas fa-play"></i> Listen</button>
 	<h2>How do I Activate Disney plus begin with an 8-Digit Code?</h2>
 	<p>Here's how to activate Disney+ using the 8-digit code and disneyplus.com/begin:</p>
 	<ul>
@@ -351,8 +355,27 @@
 
 <li><strong>Activate and Stream!:</strong> Click the "Activate" button or follow any further on-screen instructions. Once successful, your Disney+ device should be activated and ready to stream content using your existing Disney plus account.</li>
 	</ul>
+<button class="listen-button" id="listen-button"><i class="fas fa-play"></i> Listen</button>
+<script>
+        let isPlaying = false;
+        let speech;
 
-	
+        document.getElementById('listen-button').addEventListener('click', speakText);
+
+        function speakText() {
+            if (!isPlaying) {
+                const text = document.getElementById('content').innerText;
+                speech = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(speech);
+                document.getElementById('listen-button').innerHTML = '<i class="fas fa-pause"></i> Pause';
+                isPlaying = true;
+            } else {
+                window.speechSynthesis.cancel();
+                document.getElementById('listen-button').innerHTML = '<i class="fas fa-play"></i> Listen';
+                isPlaying = false;
+            }
+        }
+    </script>	
     
     
 </body>
