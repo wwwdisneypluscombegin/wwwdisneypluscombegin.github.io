@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicons -->
     <link href="favicon.png" rel="icon" />
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <!-- ****************************** -->
 
@@ -300,7 +301,27 @@
 .button-35:hover {
   box-shadow: #D70040 0 0 0 3px, transparent 0 0 0 0;
 }
-   
+
+	            #content {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+       .listen-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+       .listen-button:hover {
+            background-color: #3e8e41;
+        }
+       .listen-button i {
+            margin-right: 10px;
+        }
         
     </style>
 </head>
@@ -329,9 +350,6 @@
     </div>
     <div class="container">
 	<p>Having trouble entering your Disney+ login information on your smart TV or gaming console?  Disney+ offers a simpler way to activate your device. Head to disneyplus.com/begin on your phone, computer, or tablet. This website is for activating Disney+, not logging in to your account.  Enter the 8-digit code displayed on your TV screen and link your device to your existing Disney+ account.  Once activated, you're ready to stream your favorite Disney, Pixar, Marvel, Star Wars, and National Geographic content!</p>
-
-
-<button class="listen-button" id="listen-button"><i class="fas fa-play"></i> Listen</button>
 	    
 	<h2>Reasons to Choose Disneyplus.com/begin</h2>
 	<p>Here are some reasons to choose disneyplus.com/begin to activate your Disney plus on a TV or console:</p>
@@ -355,7 +373,7 @@
 
 <li><strong>Activate and Stream!:</strong> Click the "Activate" button or follow any further on-screen instructions. Once successful, your Disney+ device should be activated and ready to stream content using your existing Disney plus account.</li>
 	</ul>
-<button class="listen-button" id="listen-button"><i class="fas fa-play"></i> Listen</button>
+
 <script>
         let isPlaying = false;
         let speech;
